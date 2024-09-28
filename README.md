@@ -1,4 +1,4 @@
-# Mon Lab 2 sur Vagrant
+# Mon Lab 2 sur Vagrant : ▶️ Atelier : Git
 Ce lab consiste à créer deux machines virtuelles en utilisant Vagrant, un outil permettant de créer des environnements virtuels de manière automatisée. Vagrant fait partie des outils d'Infrastructure as Code (IaC), tout comme Terraform. et utilise ssh pour se connecter au server sans mot de passe en utilisant un cle ssh.
 
 ## Les etapes pour lancer ce projet 
@@ -17,7 +17,7 @@ Ce lab consiste à créer deux machines virtuelles en utilisant Vagrant, un outi
 1. create un key ssh sur ton client avec la commande : ``ssh-keygen -t rsa -b 4096``
 2. se deplacer dans le dossier : ``cd .ssh``
 3. verifie que le ssh key bien generer: `` ls dans le repertoir .ssh ``
-2. copy le key public sur ton server distant avec la commande : `` ssh-copy-id user@Ip-address de server distant`` 
+2. copy le key public sur ton server distant avec la commande : `` ssh-copy-id -i /user/home/.ssh/ansible.pub user@Ip-address de server distant`` 
 
 
 ## se connecter sur le server
