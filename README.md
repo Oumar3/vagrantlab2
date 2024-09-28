@@ -1,15 +1,25 @@
-# TP2 Lab 2 en vagrant
+# Mon Lab 2 sur Vagrant : ▶️ Atelier : Git
+Ce lab consiste à créer deux machines virtuelles en utilisant Vagrant, un outil permettant de créer des environnements virtuels de manière automatisée. Vagrant fait partie des outils d'Infrastructure as Code (IaC), tout comme Terraform. et utilise ssh pour se connecter au server sans mot de passe en utilisant un cle ssh.
 
-# Créer un repo dans github
-# Créer un projet vagrant
-# Avec votre vagrantfile créer deux VMs
-# Le premier doit porter comme nom : server et le deuxième : client
-# Dans la premiere, vous devez y installer docker
-# Dans la deuxième aussi vous devez y installer nginx
+## Les etapes pour lancer ce projet 
+
+1. Clonez le dépôt : ```git clone https://github.com/Oumar3/vagrantlab2.git```
+
+2. Se deplacer dans le dossier qui se trouve vagrantfile : ```cd vagrantlab2```
+3. lancer la creation des vm avec la commande : ```vagrant up --provision```
+
+### Verifier pour que les deux vm marchent normalemet
+1. Verifier  le server docker est bien installer : ```vagrant ssh docker-server```
+2. Verifier le server ngnix est bien installer : ```vagrant ssh ngnix-server``` 
+
+## Connexion avec ssh en utilisant ssh-key
+
+1. create un key ssh sur ton client avec la commande : ``ssh-keygen -t rsa -b 4096``
+2. se deplacer dans le dossier : ``cd .ssh``
+3. verifie que le ssh key bien generer: `` ls dans le repertoir .ssh ``
+2. copy le key public sur ton server distant avec la commande : `` ssh-copy-id -i /user/home/.ssh/ansible.pub user@Ip-address de server distant`` 
 
 
-### Project runing
+## se connecter sur le server
 
-![](imge1.png)
-# ----------------------------------------------------------------------------------------- #
-![](img2.png)
+``` ssh user@Ip-address de server distant```
