@@ -30,6 +30,8 @@ Vagrant.configure("2") do |config|
     ngnix.vm.network "private_network", ip: "192.168.33.11"
     ngnix.vm.network "forwarded_port", guest: 80, host: 82
     ngnix.vm.synced_folder "./ngnix-data", "/vagrant_data"
+    ngnix.vm.hostname = "ngnix-server"
+
 
     #provider using virtualbox
     ngnix.vm.provider "virtualbox" do |vb|
